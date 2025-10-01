@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ollama Powered Chat-Bot</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <img
+        src="static/image/sidebar.png"
+        id="side-bar-toggle"
+        alt="Open Sidebar"
+        aria-label="Toggle Sidebar"
+      />
+      <div class="title">
+        <img src="static/image/llama.jpg" alt="Llama Logo" />
+        <h1>Local Llama</h1>
+      </div>
+      <img
+        src="static/image/dark theme.jpg"
+        id="dark-theme-toggle"
+        alt="Toggle Dark Theme"
+        aria-label="Toggle Dark Theme"
+      />
+    </nav>
+
+    <header>
+      <div class="header-text">
+        <h2>Your Private AI Assistant</h2>
+        <h3>
+          You're chatting with Llama 3.2. Your conversation never leaves your
+          computer. What's on your mind?
+        </h3>
+      </div>
+    </header>
+
+    <section>
+      <div class="left-imgs"></div>
+      <div class="chat-page">
+        <div id="chat-container">
+          <div class="placeholder">
+            <p>
+              Your conversation will appear here. Send a message to get started!
+            </p>
+          </div>
+        </div>
+
+        <div id="chat-input-container">
+          <textarea
+            id="prompt-input"
+            rows="1"
+            placeholder="Ask Llama anything..."
+          ></textarea>
+          <button id="send-button" aria-label="Send Message">
+            <svg
+              viewBox="0 0 24 24"
+              xml:space="preserve"
+              xmlns="http://www.w.org/2000/svg"
+              enable-background="new 0 0 24 24"
+            >
+              <path
+                d="m21.426 11.095-17-8A1 1 0 0 0 3.001 4.05l2.427 6.068a1.002 1.002 0 0 0 0 .828L3 17.014a1 1 0 0 0 1.425.955l17-8a1 1 0 0 0 0-1.874Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="right-imgs"></div>
+    </section>
+
+    <div id="sidebar">
+      <div class="sidebar-header">
+        <h2>History</h2>
+        <button id="sidebar-close-button" aria-label="Close Sidebar">
+          &times;
+        </button>
+      </div>
+      <ul id="history-list">
+        <!-- History will be populated here by JS -->
+      </ul>
+      <div class="sidebar-footer">
+        <button id="new-chat-button">New Chat</button>
+      </div>
+    </div>
+    <div id="sidebar-overlay"></div>
+    <script src="static/scripts.js"></script>
+  </body>
+</html>
